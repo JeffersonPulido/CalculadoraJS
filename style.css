@@ -13,7 +13,7 @@ html{
 
 body{
     align-items: center;
-    background: linear-gradient(320deg, #eb92be, #ffef78);
+    background: linear-gradient(360.4deg, #eb92be, #ffef78, #82b078);
     display: flex;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-display: swap;
@@ -24,8 +24,8 @@ body{
 .wrapper{
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(255, 255, 255, 0.555);
-    border: 1px solid black;
+    background: rgba(251, 251, 251, 0.38);
+    border: 2px solid rgba(0, 0, 0, 0.37);
     border-radius: 16px;
     box-shadow: 0 4px 30px black;
     color: #232323;
@@ -42,9 +42,8 @@ body{
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
     background: rgba(255, 255, 255, 0.78);
-    border: 1px solid rgba(0, 0, 0, 0.096);
+    border: 2px solid rgba(0, 0, 0, 0.37);
     border-radius: 16px;
-    box-shadow: 0 4px 30px black;
     color: #232323;
     font-size: 35px;
     overflow: auto;
@@ -63,9 +62,8 @@ body{
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
     background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.01);
+    border: 2px solid rgba(0, 0, 0, 0.37);
     border-radius: 16px;
-    box-shadow: 0 0px 10px rgba(35, 35, 35, 0.1);
     color: #232323;
     flex-basis: 20%;
     font-family: inherit;
@@ -77,11 +75,11 @@ body{
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
     background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.01);
+    border: 2px solid rgb(70, 33, 2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
     color: #232323;
-    background: #d72;
+    background: rgb(216, 128, 56);
 }
 
 .calc-button:last-child:hover{
