@@ -10,7 +10,7 @@ var multiplicacion = "×";
 var division = "÷";
 var suma = "+";
 
-const screen = document.querySelector(".screen");
+var screen = document.querySelector(".screenDay");
 
 //Funciones operaciones y captura de datos
 function buttonClick(value) {
