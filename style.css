@@ -1,108 +1,285 @@
-html{
-    box-sizing: border-box;
-    height: 100%;
+/*VARIABLES*/
+:root {
+  /*LIGHT*/
+  --texto: #232323;
+  --fondo: rgba(192, 192, 192, 0.685);
+  --botonesNumeros: rgba(255, 255, 255, 0.75);
+  --botonesSimbolos: rgb(216, 128, 56);
+  --hoverNumeros: #eb92be;
+  --hoverSimbolos: #ffef78;
+  --verde: #82b078;
+  /*DARK*/
+  --textoDark: #ffffff;
+  --fondoDark: rgba(77, 77, 77, 0.685);
+  --botonesNumerosDark: rgba(26, 26, 26, 0.75);
+  --botonesSimbolosDark: rgb(216, 128, 56);
+  --hoverNumerosDark: #692a4b;
+  --hoverSimbolosDark: #887e2f;
+  --verdeDark: #36632c;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
 }
 
 *,
 *::before,
-*::after{
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    align-items: center;
-    background: linear-gradient(360.4deg, #eb92be, #ffef78, #82b078);
-    display: flex;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-display: swap;
-    height: inherit;
-    justify-content: center;
+.bodyTagDay {
+  align-items: center;
+  background: linear-gradient(
+    360.4deg,
+    var(--hoverNumeros),
+    var(--hoverSimbolos),
+    var(--verde)
+  );
+  display: flex;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-display: swap;
+  height: inherit;
+  justify-content: center;
 }
 
-.wrapper{
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(251, 251, 251, 0.38);
-    border: 2px solid rgba(0, 0, 0, 0.37);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px black;
-    color: #232323;
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(192, 192, 192, 0.685);
-    border: 1px solid rgba(212, 212, 212, 0.616);
-    flex-basis: 400px;
-    height: 540px;
-    padding: 20px 35px;
+.bodyTagDark {
+  align-items: center;
+  background: linear-gradient(
+    360.4deg,
+    var(--hoverNumerosDark),
+    var(--hoverSimbolosDark),
+    var(--verdeDark)
+  );
+  display: flex;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-display: swap;
+  height: inherit;
+  justify-content: center;
 }
 
-.screen{
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(255, 255, 255, 0.78);
-    border: 2px solid rgba(0, 0, 0, 0.37);
-    border-radius: 16px;
-    color: #232323;
-    font-size: 35px;
-    overflow: auto;
-    padding: 20px;
-    text-align: right;
-    width: 326px;
+.wrapperDay {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: rgba(251, 251, 251, 0.38);
+  border: 2px solid rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px black;
+  color: var(--texto);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: var(--fondo);
+  border: 1px solid rgba(212, 212, 212, 0.616);
+  flex-basis: 400px;
+  height: 540px;
+  padding: 20px 35px;
 }
 
-.calc-button-row{
-    display: flex;
-    justify-content: space-between;
-    margin: 5% 0;
+.wrapperDark {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: rgba(251, 251, 251, 0.38);
+  border: 2px solid rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px black;
+  color: var(--textoDark);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: var(--fondoDark);
+  border: 1px solid rgba(212, 212, 212, 0.616);
+  flex-basis: 400px;
+  height: 540px;
+  padding: 20px 35px;
 }
 
-.calc-button{
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(255, 255, 255, 0.75);
-    border: 2px solid rgba(0, 0, 0, 0.37);
-    border-radius: 16px;
-    color: #232323;
-    flex-basis: 20%;
-    font-family: inherit;
-    font-size: 24px;
-    height: 65px;
+.screenDay {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: rgba(255, 255, 255, 0.78);
+  border: 2px solid rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+  color: var(--texto);
+  font-size: 35px;
+  overflow: auto;
+  padding: 20px;
+  text-align: right;
+  width: 326px;
 }
 
-.calc-button:last-child{
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(255, 255, 255, 0.75);
-    border: 2px solid rgb(70, 33, 2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-    color: #232323;
-    background: rgb(216, 128, 56);
+.screenDark {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: rgba(114, 114, 114, 0.78);
+  border: 2px solid rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+  color: var(--textoDark);
+  font-size: 35px;
+  overflow: auto;
+  padding: 20px;
+  text-align: right;
+  width: 326px;
 }
 
-.calc-button:last-child:hover{
-    background-color: inherit;
-    color: inherit;
+.calc-button-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0;
 }
 
-.calc-button:last-child:active{
-    background-color: #ffef78;
+.calc-buttonDay {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: var(--botonesNumeros);
+  border: 2px solid rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+  color: var(--texto);
+  flex-basis: 20%;
+  font-family: inherit;
+  font-size: 24px;
+  height: 65px;
 }
 
-.calc-button:hover{
-    background-color: inherit;
+.calc-buttonDark {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: var(--botonesNumerosDark);
+  border: 2px solid rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+  color: var(--textoDark);
+  flex-basis: 20%;
+  font-family: inherit;
+  font-size: 24px;
+  height: 65px;
 }
 
-.calc-button:active{
-    background-color: #eb92be;
+.calc-buttonDay:last-child {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: var(--botonesNumeros);
+  border: 2px solid rgb(70, 33, 2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  color: var(--texto);
+  background: var(--botonesSimbolos);
 }
 
-.double{
-    flex-basis: 47%;
+.calc-buttonDark:last-child {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: var(--botonesNumerosDark);
+  border: 2px solid rgb(70, 33, 2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  color: var(--textoDark);
+  background: var(--botonesSimbolosDark);
 }
 
-.triple{
-    flex-basis: 73%;
+.calc-button:last-child:hover {
+  background-color: inherit;
+  color: inherit;
+}
+
+.calc-buttonDay:last-child:active {
+  background-color: var(--hoverSimbolos);
+}
+
+.calc-buttonDark:last-child:active {
+  background-color: var(--hoverSimbolosDark);
+}
+
+.calc-button:hover {
+  background-color: inherit;
+}
+
+.calc-buttonDay:active {
+  background-color: var(--hoverNumeros);
+}
+
+.calc-buttonDark:active {
+  background-color: var(--hoverNumerosDark);
+}
+
+.double {
+  flex-basis: 47%;
+}
+
+.triple {
+  flex-basis: 73%;
+}
+
+/*SWITCH DARK*/
+.switchTheme {
+  display: flex;
+  margin: auto;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon, 1.4em);
+  width: var(--size-of-icon, 1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset, 0.3em);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  -webkit-box-shadow: inset -3px -2px 5px -2px #8983f7,
+    inset -10px -4px 0 0 #a3dafb;
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
